@@ -1,29 +1,152 @@
+* {
+  font-family: sans-serif;
+}
+
 .app {
-  max-width: 600px;
-  margin: 20px auto;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
 }
 
 h1 {
   text-align: center;
-}
-
-form {
-  display: flex;
-  gap: 10px;
   margin-bottom: 20px;
 }
 
-input, select, button {
-  padding: 8px;
+.layout {
+  display: flex;
+  gap: 20px;
 }
 
-ul {
-  list-style: none;
+.sidebar {
+  width: 200px;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  height: fit-content;
 }
 
-li {
+.sidebar button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sidebar button:hover {
+  background-color: #ccc;
+}
+
+.category-filter {
+  margin-top: 20px;
+}
+
+.category-filter h3 {
+  margin-bottom: 10px;
+}
+
+.category-filter button {
+  background-color: #e0e0e0;
+}
+
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  min-height: 500px;
+}
+
+/* Responsive dizayn */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .sidebar button {
+    flex: 1;
+    margin-bottom: 0;
+  }
+
+  .category-filter {
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+}
+
+/* Oldingi uslublar (qisqartirilgan) */
+.todo-section,
+.timer-section,
+.goal-section,
+.stats-section {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.pomodoro-timer.work-mode {
+  background-color: #e6ffe6;
+}
+
+.pomodoro-timer.break-mode {
+  background-color: #e6f2ff;
+}
+
+.timer-display {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.timer-settings {
+  margin: 10px 0;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.timer-controls {
   display: flex;
   gap: 10px;
-  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.goal-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar div {
+  height: 100%;
+  background-color: #4caf50;
+  transition: width 0.3s;
+}
+
+.stats-chart {
+  max-width: 300px;
+  margin: 20px auto;
 }
